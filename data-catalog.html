@@ -89,3 +89,151 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Catalog - Sports Data Mart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+        .sidebar h5 {
+            margin-bottom: 20px;
+            color: #ffc107;
+        }
+        .sidebar a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        .filter-section {
+            margin-bottom: 30px;
+        }
+        .filter-section label {
+            font-weight: bold;
+        }
+        .content-wrapper {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        .card-body h5 {
+            font-size: 1.25rem;
+            color: #343a40;
+        }
+        .card-body p {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar for Filtering -->
+    <div class="sidebar">
+        <h5>Filter Datasets</h5>
+        <div class="filter-section">
+            <label for="sportType">Sport Type</label>
+            <select class="form-control mb-3" id="sportType">
+                <option value="">All</option>
+                <option value="football">Football</option>
+                <option value="basketball">Basketball</option>
+                <option value="swimming">Swimming</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="filter-section">
+            <label for="dataType">Data Type</label>
+            <select class="form-control mb-3" id="dataType">
+                <option value="">All</option>
+                <option value="performance">Performance</option>
+                <option value="demographics">Demographics</option>
+                <option value="health">Health</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="filter-section">
+            <label for="region">Region</label>
+            <select class="form-control mb-3" id="region">
+                <option value="">All</option>
+                <option value="north_america">North America</option>
+                <option value="europe">Europe</option>
+                <option value="asia">Asia</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="filter-section">
+            <label for="dateRange">Date Range</label>
+            <input type="date" class="form-control mb-3" id="dateRangeStart">
+            <input type="date" class="form-control mb-3" id="dateRangeEnd">
+        </div>
+        <button class="btn btn-warning w-100">Apply Filters</button>
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <h2>Data Catalog</h2>
+        <p>Explore our extensive collection of datasets available for your business needs.</p>
+
+        <!-- Data Sources Section -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Football Stats">
+                    <div class="card-body">
+                        <h5 class="card-title">Football Performance Stats</h5>
+                        <p class="card-text">Detailed performance data for football players across various leagues, including goals, assists, and match history.</p>
+                        <a href="dataset-football.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Basketball Demographics">
+                    <div class="card-body">
+                        <h5 class="card-title">Basketball Demographics</h5>
+                        <p class="card-text">Demographic data of basketball players and fans worldwide, including age, gender, and ethnicity distribution.</p>
+                        <a href="dataset-basketball.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x150" class="card-img-top" alt="Athlete Health Records">
+                    <div class="card-body">
+                        <h5 class="card-title">Athlete Health Records</h5>
+                        <p class="card-text">Health and fitness data of athletes across different sports, including injury history and fitness assessments.</p>
+                        <a href="dataset-health.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more data source cards as needed -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
